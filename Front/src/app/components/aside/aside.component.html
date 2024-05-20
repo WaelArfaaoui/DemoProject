@@ -1,0 +1,20 @@
+<aside>
+
+    <img  alt="">
+
+    <div class="sidebar">
+
+        <a *ngFor="let item of items" [ngClass]="{'active': selectedItemId === item.id}" (click)="selectItem(item.id)">
+            <span class="material-symbols-outlined">{{item.icon}}</span>
+            <h3>{{item.name}}</h3>
+        </a>
+
+        <a (click)="logout()">
+            <span class="material-symbols-outlined">logout</span>
+            <h3>Logout</h3>
+        </a>
+
+    </div>
+
+</aside>
+<!-- End of the aside -->

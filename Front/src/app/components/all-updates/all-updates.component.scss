@@ -1,0 +1,196 @@
+
+
+
+.right  .top {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: -0.5rem;
+}
+
+
+.right .top button {
+  display: none   ;
+}
+
+.right .theme-toggler {
+  background: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.6rem  ;
+  width: 4.2rem;
+  cursor: pointer;
+  border-radius: var(--border-radius-1);
+}
+
+.right .theme-toggler span {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right .theme-toggler span.active {
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--border-radius-1);
+}
+
+.right .top .profile {
+  display: flex;
+  gap: 2rem   ;
+  text-align: right;
+  padding: 10px ;
+  cursor: pointer;
+}
+
+.right .top .profile:hover {
+  background: wheat;
+  border-radius: 10px;
+}
+
+.profile-active {
+  background: wheat;
+  border-radius: 10px;
+
+}
+
+/*---------------- Recent updates --------------------*/
+
+.recent-updates {
+  position : relative;
+}
+
+.right  .recent-updates .head-up {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: start;
+  align-items: center;
+}
+
+
+.right  .recent-updates .head-up h2 {
+  margin-bottom: 0.8rem ;
+}
+
+
+
+.right .recent-updates .updates {
+  background: var(--color-white);
+  padding: 10px;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.right .recent-updates .updates .update {
+  display: grid;
+  grid-template-columns: 2.6rem auto ;
+  gap: 1rem;
+  margin-bottom: 1rem ;
+  padding: 0.3rem ;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.right .recent-updates .updates .update:hover {
+
+  background: wheat;
+}
+
+.more {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: var(--color-info-dark);
+}
+
+.more:hover {
+  background: #7d8da1;
+  color: white;
+  border-radius: 20px;
+}
+
+.profile-dropdown {
+  display : none;
+}
+
+.profile-dropdown-active {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-3);
+  position: absolute;
+  width : 100% ;
+}
+
+
+
+
+.profile-dropdown-list {
+
+  width: fit-content;
+  right: 0;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  max-height: 0;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: max-height 0.5s;
+}
+
+.profile-dropdown-list hr {
+  border: 0.5px solid var(--color-primary);
+}
+
+.profile-dropdown-list.active {
+  max-height: 500px;
+}
+
+.profile-dropdown-list-item {
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  transition: background-color 0.2s ease-in, padding-left 0.2s;
+  border-radius: var(--border-radius-3);
+
+}
+
+.profile-dropdown-list-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.profile-dropdown-list-item a i {
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  line-height: 2.3rem;
+  text-align: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: margin-right 0.3s;
+}
+
+.profile-dropdown-list-item:hover {
+  padding-left: 1.5rem;
+  background-color: var(--color-light);
+}
+
+ul {
+  padding: 0px;
+}
+
+li a {
+  cursor: pointer;
+}
+
+

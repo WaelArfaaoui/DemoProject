@@ -1,0 +1,13 @@
+<div class="my-container">
+  <app-aside></app-aside>
+  <div>
+    <main>
+      <div class="date mt-1" >
+        <input type="date" [value]="currentDate" name="currentDate" id="currentDate" >
+      </div>
+      <div class="mt-2"></div>
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  <app-updates></app-updates>
+</div>

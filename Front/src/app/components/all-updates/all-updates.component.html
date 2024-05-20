@@ -1,0 +1,20 @@
+<div class="right">
+  <div class="recent-updates">
+    <div class="updates">
+      <div *ngFor="let update of updates.slice(0, displayedUpdatesCount)" class="update" (click)="useRule(update.ruleId)">
+        <div class="profile-photo">
+          <img [src]="update.profileImagePath" alt="profile_photo">
+        </div>
+        <div class="message">
+          <p><b>{{ update.modifiedBy }}</b> {{ update.modificationType }} rule <b>#{{update.ruleName}}</b>.</p>
+          <small class="text-muted">
+            {{ update.modificationDate | date: 'dd/MM/yyyy' }}
+          </small>
+        </div>
+      </div>
+
+      <a href="#" class="more" (click)="loadMoreUpdates($event)">More ..</a>
+
+    </div>
+  </div>
+</div>

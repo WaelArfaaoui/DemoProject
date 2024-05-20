@@ -1,0 +1,95 @@
+<div class="right">
+
+  <div class="top">
+
+    <div class="theme-toggler" (click)="toggleDarkTheme()">
+                    <span class="material-symbols-outlined" [class.active]="!isDarkTheme">
+                         light_mode
+                    </span>
+      <span class="material-symbols-outlined" [class.active]="isDarkTheme">
+                         dark_mode
+                    </span>
+    </div>
+
+    <div class="profile" (click)="displaySettings()" [class.profile-active]="isSettingsDiplayed">
+      <div class="info">
+        <p style="margin-bottom: 0rem">Hey , <b>{{username}}</b></p>
+        <small class="text-mute" >{{role}}</small>
+      </div>
+      <div class="profile-photo">
+        <img [src]="profileImagePath" alt="profile_photo">
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+  <!--          End Top section -->
+
+  <div class="recent-updates">
+    <div class="profile-dropdown-active" [class.profile-dropdown]="!isSettingsDiplayed">
+      <ul class="profile-dropdown-list" class="active">
+        <li class="profile-dropdown-list-item">
+          <a (click)="onNavigateToProfile()">
+            <i class="fa-regular fa-user"></i>
+            Profile
+          </a>
+        </li>
+
+        <li class="profile-dropdown-list-item">
+          <a href="#">
+            <i class="fa-regular fa-envelope"></i>
+            Inbox
+          </a>
+        </li>
+
+        <li class="profile-dropdown-list-item">
+          <a href="#">
+            <i class=""><span class="material-symbols-outlined">
+                    group</span></i>
+            Users
+          </a>
+        </li>
+
+        <li class="profile-dropdown-list-item">
+          <a href="#">
+            <i class="fa-solid fa-sliders"></i>
+            Settings
+          </a>
+        </li>
+
+        <li class="profile-dropdown-list-item">
+          <a href="#">
+            <i class="fa-regular fa-circle-question"></i>
+            Help & Support
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="head-up">
+                <span class="material-symbols-outlined">
+            update
+            </span>
+      <h2>Recent updates</h2>
+    </div>
+    <div class="updates">
+      <div *ngFor="let update of updates" class="update" (click)="useRule(update.ruleId)">
+        <div class="profile-photo">
+          <img [src]="update.profileImagePath" alt="profile_photo">
+        </div>
+        <div class="message">
+          <p><b>{{ update.modifiedBy }}</b> {{ update.modificationType }} rule <b>#{{update.ruleName}}</b>.</p>
+          <small class="text-muted">
+            {{ update.modificationDate | date: 'dd/MM/yyyy' }}
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
