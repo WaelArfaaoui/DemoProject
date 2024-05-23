@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment # Kubernetes resource kind we are creating
 metadata:
-  name: adminModule-deployment
+  name: adminModuleDeployment
 spec:
   selector:
     matchLabels:
