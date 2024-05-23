@@ -60,7 +60,7 @@ export class HeatmapComponent implements OnInit {
             data: (rule.dayUsages?.map(dayUsage => ({
               x: dayUsage.date,
               y: dayUsage.usageCount
-            })) || []).reverse() // Reverse the dayUsages array to ensure correct order
+            })) || []).reverse()
           }));
 
           this.updateChartOptions(dataSeries);
