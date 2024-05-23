@@ -1,5 +1,5 @@
 # Use JDK 17 as the base image
-FROM adoptopenjdk/openjdk17:alpine-jre
+FROM openjdk:17-oracle
 
 # Expose port 8080
 EXPOSE 8080
