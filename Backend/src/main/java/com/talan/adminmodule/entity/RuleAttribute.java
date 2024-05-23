@@ -26,6 +26,6 @@ public class RuleAttribute {
     @Column(name = "percentage", nullable = false)
     private Double percentage;
 
-    @Column(name = "value", nullable = false)
+    @Column(name = "_value", nullable = false)
     private Double value;
 }
